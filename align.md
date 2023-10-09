@@ -2,7 +2,7 @@
 
 
 ✔️자기자신이 중앙정렬
-position, flex, grid, place-items, margin
+position, flex, grid, place-items (grid 일 때 사용), margin
 
 ✔️수평 중앙정렬
 - 블록요소 : 자기자신에게 margin:auto;
@@ -15,4 +15,5 @@ position, flex, grid, place-items, margin
 
 --------------------------------------------------------------------------------
 [ place-items 설명 ]
+display:grid; 일 때 사용
 https://www.w3schools.com/cssref//playdemo.php?filename=playcss_place-items
