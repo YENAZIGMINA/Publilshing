@@ -2,7 +2,7 @@
 
 
 ✔️자기자신이 중앙정렬
-position, flex, grid, place-items, margin🛺
+position, flex, grid, place-items, margin
 
 ✔️수평 중앙정렬
 - 블록요소 : 자기자신에게 margin:auto;
@@ -11,3 +11,8 @@ position, flex, grid, place-items, margin🛺
 ✔️자기자신과 인접해있는 요소와 수직 중앙을 맞출경우
 - vertical-align: 값;
 - transform : translateY(값);
+
+
+--------------------------------------------------------------------------------
+[ place-items 설명 ]
+https://www.w3schools.com/cssref//playdemo.php?filename=playcss_place-items
