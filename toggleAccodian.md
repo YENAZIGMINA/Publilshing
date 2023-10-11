@@ -2,11 +2,17 @@
 ![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/a25cc329-71e1-492a-aa73-4345ac40eea5)
 
 
-![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/bbfd0d6e-916a-42f2-a28c-e82776bb1e6c)
+
+
 ◼클릭(토글)하면 나와야하는 pannel 영역 (* max-height: 0; overflow: hidden;)
 
+![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/bbfd0d6e-916a-42f2-a28c-e82776bb1e6c)
+
 ◼active 붙으면 아이콘 변경 (accordions)
+
 ![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/de8e3f57-d5f5-4516-96cb-75999cc4e297)
+
+
 
 
     let accordions = document.getElementsByClassName('detail_btn');
