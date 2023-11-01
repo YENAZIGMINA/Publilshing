@@ -24,4 +24,44 @@
         document.getElementById('defaultOpen').click();
 
 
+----------------------------------------------------------------------
 
+
+
+
+        <div class="tap-box">
+                <ul class="taps depth5">
+                    <li><a href="#mainTabBtn" class="active mainTabBtn" title="선택됨"><span>지하 1층</span></a>
+                    </li>
+        
+                    <li><a href="#mainTabBtn" class="mainTabBtn"><span>본관 1층</span></a>
+                    </li>
+        
+                    <li>
+                        <a href="#mainTabBtn" class="mainTabBtn"><span>본관 2층</span></a>
+                    </li>
+        
+                    <li>
+                        <a href="#mainTabBtn" class="mainTabBtn"><span>본관 3층</span></a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <script>
+            //<![CDATA[
+            $(document).ready(function(){
+                $(".mainTabBtn").bind("click",function(){
+                        var curLength = $(this).parent().index();
+                        $(".tab_content").css("display","none");
+                        $("#TabUl > li").removeClass("active");
+                        $("#mainTab"+(curLength+1)).css("display","block");
+                        $(this).parent().addClass("active");
+                });
+            });
+            //]]>
+            </script>
+
+            
