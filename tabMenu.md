@@ -49,6 +49,16 @@
 
 
 
+            <div class="tab_content" id="mainTab4" style="display: none;">
+                <div class="img-preview txt-box mg20t tc">
+                    <a class="preview-btn" href="http://210.206.69.186/Jangsu/Potal/images/content/02/map-3f.png" target="_blank" title="새창으로열림">
+                        <span>+원본보기</span></a>
+                    <img src="http://210.206.69.186/Jangsu/Potal/images/content/02/map-3f.png" alt="">
+                </div>
+            </div>
+
+
+
 
             <script>
             //<![CDATA[
