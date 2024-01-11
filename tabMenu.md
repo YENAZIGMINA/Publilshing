@@ -26,6 +26,28 @@
 
 ----------------------------------------------------------------------
 
+*탭 클릭시 클래스명 active 추가(텍스트 색상변경위해)
+        function openMap(button, element) {
+        let tabcontent = document.getElementsByClassName('mapImg');
+    
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+    
+        let tablinks = document.getElementsByClassName('tablinks');
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove('active');
+        }
+    
+        document.getElementById(button).style.display = "block";
+        element.classList.add('active');
+    }
+    
+    document.getElementById('defaultOpen').click();
+
+
+----------------------------------------------------------------------
+
 
 
 
