@@ -12,13 +12,16 @@
 
 # scrollTop : 요소의 수직 스크롤 바 위치
 
+element.scrollTop;
+
+element.scrollTop = 200; 
 
 
 
+------------------------------------------------------------------------------------------------------
 
 
-
-# 스크롤 원하는 위치에 놓기 (탭마다)
+# 스크롤 원하는 위치에 놓기 (여러개)
 
 ![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/42788a1d-2c08-466e-8535-0570cd6bcff9)
 
@@ -35,6 +38,9 @@
 
 
 
+
+
+
 # 최대수평 스크롤값
 
 ![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/3e5027e5-3bba-4c4a-b39d-01e754b1e541)
@@ -46,6 +52,10 @@ const maxScrollLeft = el.scrollWidth - el.clientWidth;
 
 const maxScrollHeight = el.scrollHeight - el.clientHeight;
 
+
+
+
+------------------------------------------------------------------------------------------------------
 
 
 
