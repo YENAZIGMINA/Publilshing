@@ -78,4 +78,13 @@ const maxScrollHeight = el.scrollHeight - el.clientHeight;
 $(selector).animate({style}, speed, easing, callback)
 
 
+# 스크롤 부드럽게
+
+      window.scroll({
+         top:0,
+         left:100,
+         behavior:'smooth'
+      });
+
+
 
