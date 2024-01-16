@@ -88,3 +88,12 @@ $(selector).animate({style}, speed, easing, callback)
 
 
 
+      function makeLinksSmooth() { 
+        const navLinks = document.querySelectorAll("nav a"); 
+
+        navLinks.forEach((link) => {
+        link.addEventListener("click", smoothScroll);
+           });
+      }
+
+
