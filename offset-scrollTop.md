@@ -35,16 +35,37 @@
 
 
 
+# 최대수평 스크롤값
+
+![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/3e5027e5-3bba-4c4a-b39d-01e754b1e541)
+
+const maxScrollLeft = el.scrollWidth - el.clientWidth;
+
+# 최대수직 스크롤값
+![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/406a48a1-cf83-48c9-95d8-8dffbf6076c5)
+
+const maxScrollHeight = el.scrollHeight - el.clientHeight;
+
+
+
+
 # 윈도우 스크롤 맨위로 이동
 
-제이쿼리
-$(window).scrollTop(0);
+      제이쿼리
+      $(window).scrollTop(0);
 
-애니메이션 주면서 이동
-$('html, body').animate({scrollTop:0},1000);
+      애니메이션 주면서 이동
+      $('html, body').animate({scrollTop:0},1000);
 
-자바스크립트
-window.scrollTop(0,300);
+      자바스크립트
+      window.scrollTop(0,300);
+
+
+# 애니메이션
+
+줄임표현 속성들을 완벽히 지원하지 않는다. (border x -> border-width o)
+
+$(selector).animate({style}, speed, easing, callback)
 
 
 
