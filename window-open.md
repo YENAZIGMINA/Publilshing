@@ -18,7 +18,7 @@
 
 
 
-# 예제
+# js - window.open
 
 
     <button onclick="popup()">popup naver</button>
@@ -27,3 +27,12 @@
         let options = "toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=1200, height=800, top=0,left=0";
           window.open("http://www.naver.com","_blank", options);
     };
+
+
+
+
+# a태그 - window.open
+
+    <a href="https://www.naver.com/" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
+        클릭 시 팝업 창으로 이동합니다
+    </a>
