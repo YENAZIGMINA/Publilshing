@@ -88,3 +88,50 @@
 
         </body>
         </html>
+
+
+
+
+
+ # 특정날짜까지만 보이기 레이어팝업
+
+
+		<div class="popBox" id="popBox"  tabindex="0">
+    			<div class="popCntBox">
+				<div class="in-cont" style="height:auto">
+					<video src = "/upload_data/popup/popup/170382586436189.mp4" controls width="100%" height="auto"></video>
+				</div>
+        			<div class="popCloseBox">
+            				<a href="#" class="noLink popToday">오늘하루안보기</a>
+            				<a href="#" class="noLink popClose">닫기</a>
+        			</div>
+    			</div>
+		</div>
+
+
+
+		<script>
+   			const date1 = new Date;
+    			const date2 = new Date(2024, 0, 1, 6, 0, 0); // 시작날짜 (년,월,일,시,분,초)
+    			const date3 = new Date(2024, 0, 5, 17, 59, 0); // 종료날짜
+    			const popEl = document.getElementById("popBox");
+
+    			// Check "오늘하루안보기" 
+    			const isTodayHidden = localStorage.getItem("popBoxHidden") === date1.toDateString();
+
+    			if (date1 < date2 || date1 > date3 || isTodayHidden) {
+        			popEl.style.display = 'none';
+    			}
+
+    			// Add click event listener "오늘하루안보기"
+    			const popTodayLink = document.querySelector('.popToday');
+    			popTodayLink.addEventListener('click', function (event) {
+        			event.preventDefault();
+
+        			// Set a flag in local storage to remember that the user has clicked the link today
+       				 localStorage.setItem("popBoxHidden", date1.toDateString());
+
+        			popEl.style.display = 'none';
+    			});
+		</script> 
+ 
