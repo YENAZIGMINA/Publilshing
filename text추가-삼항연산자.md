@@ -12,3 +12,16 @@
           document.querySelector('.dkmode-btn').title = (isDarkMode ? "일반모드" : "다크모드") + "로 전환합니다";
         }
     </script>
+
+
+    <style>
+    .dkmode-btn::after {
+    content: attr(title);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    white-space: nowrap;
+    font-size: 0;  /* 시각적으로 텍스트를 감춥니다. */
+    overflow: hidden;
+    }
+    </style>
