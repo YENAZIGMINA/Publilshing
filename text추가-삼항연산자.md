@@ -14,14 +14,4 @@
     </script>
 
 
-    <style>
-    .dkmode-btn::after {
-    content: attr(title);
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    white-space: nowrap;
-    font-size: 0;  /* 시각적으로 텍스트를 감춥니다. */
-    overflow: hidden;
-    }
-    </style>
+  
