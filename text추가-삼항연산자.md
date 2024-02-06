@@ -50,3 +50,20 @@
                 document.querySelector('.hideTitle').innerText = (isDarkMode ? "일반모드" : "다크모드") + "로 전환합니다";
             }
         </script>
+
+
+
+
+
+## title 현재탭 텍스트 추가
+        
+        <script>
+            window.onload = function() {
+                var yearListItem = document.querySelector('.yearList li.active');
+        
+                if (yearListItem) {
+                    var activeLink = yearListItem.querySelector('a');
+                    activeLink.setAttribute('title', '현재탭');
+                }
+            };
+        </script>
