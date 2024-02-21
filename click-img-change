@@ -1,0 +1,25 @@
+    <div class="logOther">
+                        <a href="#">
+                            <img src="../img/logChek.png" alt="선택" class="chekImg">
+                            <span>Remember me</span>
+                        </a>
+                        <a href="#"><span>Forgot Password?</span></a>
+                    </div>
+
+
+    <script type="text/javascript">
+        
+
+        $(function () {
+            let num = 0;
+            $(".logOther a:first-child").click(function () {
+                if (num == 0) {
+                    $(".chekImg").attr("src", "../img/logChek-on.png");
+                    num = 1;
+                } else {
+                    $(".chekImg").attr("src", "../img/logChek.png");
+                    num = 0;
+                }
+            });
+        });
+    </script>
