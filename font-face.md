@@ -2,6 +2,9 @@
 
 ▪ IE6~8 브라우저는 EOT를 지원. 불필요하게 WOFF파일까지 요청 할 필요가 없음 ->  local(※)이라는 구문을 넣어서 WOFF의 요청을 막음
 
+format('woff') 포맷 타입은 이 형식을 지원하는 브라우저만 글꼴을 내려받게 되어 있다.
+
+
     @font-face{
       font-family:ng;
       src:url(NanumGothic.eot);
