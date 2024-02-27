@@ -1,10 +1,13 @@
 # Img 사이즈 반응형
 
-        <div class="imgWrap">
-            <img src="" alt="">
+        <div class="wrap">
+            <div class="imgWrap">
+              <img src="https://cdn.pixabay.com/photo/2024/02/17/11/45/moon-8579189_960_720.jpg 1x, https://cdn.pixabay.com/photo/2024/02/17/11/45/moon-8579189_1280.jpg" alt="">
+            </div>
         </div>
 
-        .imgWrap {width: 50%; height: 0; padding-bottom: 50%;}
+        .wrap {width: 500px;}
+        .imgWrap {width: 100%; height: 0; padding-bottom: 56.82%;}
         .imgWrap img {max-width: 100%; height: auto;}
         
 
