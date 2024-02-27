@@ -1,7 +1,17 @@
 # Img 사이즈 반응형
 
+        <div class="imgWrap">
+            <img src="" alt="">
+        </div>
+
+        .imgWrap {width: 50%; height: 0; padding-bottom: 50%;}
+        .imgWrap img {max-width: 100%; height: auto;}
+        
 
     ✔️반응형 max-width / 백그라운드 이미지로 넣을 때 조절 (패딩에 백그라운드 이미지 들어갈 수 있음)
+
+
+    
 ![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/8f7d143c-a135-4a4d-880f-adb6b84ff7f7)
 
 
