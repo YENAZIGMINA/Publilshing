@@ -37,6 +37,62 @@ element.scrollTop = 200;
       ---> abc의 스크롤이 selector요소의 위치로 500ms 동안 이동
 
 
+# 스크롤 원하는 위치에 놓기 (js)
+      
+      
+      <nav class="gnb">
+        <ul class="gnb-list">
+            <li class="gnb-item"><a href="#sectionOne">Section01</a></li>
+            <li class="gnb-item"><a href="#sectionTwo">Section02</a></li>
+            <li class="gnb-item"><a href="#sectionThree">Section03</a></li>
+        </ul>
+       </nav>
+
+
+       <div>
+           <section id="sectionOne" class="section">Section01</section>
+           <section id="sectionTwo" class="section">Section02</section>
+           <section id="sectionThree" class="section">Section03</section>
+       </div>
+
+
+       ----------------------------------------------------------
+
+      *{margin: 0; padding: 0;}
+        nav.gnb {position: fixed; top: 0; left: 0; right: 0; background-color: rgb(32, 32, 32);}
+        ul.gnb-list {display: flex; justify-content: space-between;}
+        ul.gnb-list li {border-right: 1px solid #ccc; width: 33.33%; text-align: center;}
+        ul.gnb-list li a {text-decoration: none; color: #fff; padding: 15px; width: 100%; display: inline-block;}
+
+        section {height: 60vh; color: #252525; font-size: 35px; display: flex; justify-content: center; align-items: center;}
+        section:nth-child(1) {background: coral;}
+        section:nth-child(2) {background: cornflowerblue;}
+        section:nth-child(3) {background: rgb(255, 151, 172);}
+
+        ------------------------------------------------------------
+
+
+        <script>
+
+        let gnbItem = document.querySelector('.gnb-item');
+        let sections = document.querySelector('section')
+
+        gnbItem.forEach((gnbItem, index) => {
+            gnbItem.addEventListner("click", (e) => {
+                e.preventDefault();
+
+                let sectionTop = sections[index].offsetTop - 500;
+
+                window.scroll({top:sectionTop});
+            })
+        })
+
+       </script>
+       
+
+      
+
+
 
 
 
