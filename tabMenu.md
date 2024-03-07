@@ -96,4 +96,47 @@
             //]]>
             </script>
 
+
+
+----------------------------------------------------------------------------
+
+# 탭메뉴 부드럽게 나타나기
+
+        <!--탭메뉴-->
+        <ul class="commonTab">
+            <li class="t1">
+                <a href="#listtype1"> 탭1</a>
+            </li>
+            <li class="t2">
+                <a href="#listtype2">탭2</a>
+            </li>
+            <li class="t3">
+                <a href="#listtype3">탭3</a>
+            </li>
+        </ul>
+        <!--//탭메뉴-->
+
+        <!--내용-->
+        <div class="prolist" id="listtype1">
+            탭1 내용
+        </div>
+        <div class="prolist" id="listtype2">
+            탭2 내용
+        </div>
+        <div class="prolist" id="listtype3">
+            탭3 내용
+        </div>
+        <!--//내용-->
+
+
+
+        $('.prolist').hide();
+        $('.commonTab a').bind('click', function(e){
+            $('.commonTab a.on').removeClass('on');
+            $('.prolist:visible').hide();
+            $(this.hash).fadeIn(300);
+            $(this).addClass('on')
+            e.preventDefault();
+        })
+        .filter(':eq(1)').click();
             
