@@ -9,3 +9,20 @@
     .input-txt:placeholder-shown {border-color: rgb(219, 219, 147);}
     .input-txt:placeholder-shown + .input-msg {display: none;}
     </style>
+
+
+
+
+# input 숫자만 작성가능 하도록
+
+        <input type="text" size="40" onkeyup="setNum(this);">
+        <textarea onkeyup="setNum(this);"></textarea>
+
+
+        <script type="text/javascript">
+            function setNum (obj){
+                val = obj.value;
+                re=/[^0-9]/gi;
+                obj.value=val.replace(re,"");
+            }
+        </script>
