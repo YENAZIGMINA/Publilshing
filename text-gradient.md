@@ -4,3 +4,10 @@
         color: transparent;
         -webkit-background-clip: text;
     }
+
+
+
+        background-image: linear-gradient(to right, blue, skyblue);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
