@@ -13,7 +13,7 @@
 
 
 
-# input 숫자만 작성가능 하도록
+# input 숫자만 작성가능 하도록1
 
         <input type="text" size="40" onkeyup="setNum(this);">
         <textarea onkeyup="setNum(this);"></textarea>
@@ -26,3 +26,7 @@
                 obj.value=val.replace(re,"");
             }
         </script>
+
+
+# input 숫자만 작성가능 하도록2
+        <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
