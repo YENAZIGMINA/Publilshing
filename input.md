@@ -59,3 +59,27 @@
         function getGender(event) {
             document.getElementById('result').innerText = event.target.value;
         }
+
+
+
+# chekbox 전체선택
+
+        <input type="checkbox" name="animal" value="selectall" onclick="selectAll(this)">전체
+        <br>
+        <input type="checkbox" name="animal" value="dog">개
+        <br>
+        <input type="checkbox" name="animal" value="cat">고양이
+        <br>
+        <input type="checkbox" name="animal" value="rabbit">토끼
+
+        <script>
+        
+            function selectAll(selectAll) {
+                const checkboxs = document.getElementsByName('animal');
+
+                    checkboxs.forEach((checkbox) => {
+                        checkbox.checked = selectAll.checked;
+                    });
+                }
+
+        </script>        
