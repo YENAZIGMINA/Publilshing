@@ -46,3 +46,16 @@
                 }
             }
     </script>
+
+
+
+# input - radio 클릭한 값 출력하기
+
+        <input type="radio" name="gender" value="female" onclick="getGender(event)">여성
+        <input type="radio" name="gender" value="male" onclick="getGender(event)">남성
+        <div id="result"></div>
+
+
+        function getGender(event) {
+            document.getElementById('result').innerText = event.target.value;
+        }
