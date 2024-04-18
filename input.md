@@ -30,3 +30,19 @@
 
 # input 숫자만 작성가능 하도록2
         <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+
+
+# input CapsLock 문구넣기
+        <input type="text" id="name" onkeyup="checkCapsLock(event)">
+        <div id="message"></div>
+
+        <script>
+        
+            function checkCapsLock(event) {
+                if(event.getModifierState("CapsLock")){
+                    document.getElementById("message").innerText = "CapsLock이 켜져 있습니다."
+                } else {
+                    document.getElementById("message").innerText = ""
+                }
+            }
+    </script>
