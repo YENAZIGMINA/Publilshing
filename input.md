@@ -49,6 +49,15 @@
 
 
 
+# input 영문만 입력가능하도록
+        <input type="text" oninput="handleOnInput(this)" />
+
+        function handleOnInput(e)  {
+              e.value = e.value.replace(/[^A-Za-z]/ig, '')
+        }
+
+
+
 # input - radio 클릭한 값 출력하기
 
         <input type="radio" name="gender" value="female" onclick="getGender(event)">여성
