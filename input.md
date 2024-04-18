@@ -49,13 +49,23 @@
 
 
 
-# input 영문만 입력가능하도록
+# input 영문만 입력가능하도록1
         <input type="text" oninput="handleOnInput(this)" />
 
         function handleOnInput(e)  {
               e.value = e.value.replace(/[^A-Za-z]/ig, '')
         }
 
+
+
+# input 영문만 입력가능하도록2
+
+        <form>
+          <input type="text" pattern="[A-Za-z]+">
+          <input type='submit'>
+        </form>
+
+        
 
 
 # input - radio 클릭한 값 출력하기
