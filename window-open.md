@@ -36,3 +36,23 @@
     <a href="https://www.naver.com/" onclick="window.open(this.href, '_blank', 'width=800, height=600'); return false;">
         클릭 시 팝업 창으로 이동합니다
     </a>
+
+
+
+
+
+
+            <script>
+                <!--//PopUp Window
+                function modelesswin(url,mwidth,mheight){
+                if (document.all&&window.print) //if ie5
+                    eval('window.showModelessDialog(url,"","help:0;resizable:1;dialogWidth:'+mwidth+'px;dialogHeight:'+mheight+'px")')
+                else
+                    eval('window.open(url,"","width='+mwidth+'px,height='+mheight+'px,resizable=1,scrollbars=1")')
+                }
+
+                //뜨게할 윈도주소 (뜨게할 윈도주소,가로넓이,세로높이)
+                modelesswin("https://www.uiryeong.go.kr/board/write.uiryeong?boardId=BBS_0000530&menuCd=DOM_000000206013000000&contentsSid=1934",800,800)
+
+                //--->
+            </script>
