@@ -139,4 +139,28 @@
             e.preventDefault();
         })
         .filter(':eq(1)').click();
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+![image](https://github.com/YENAZIGMINA/Publilshing/assets/129706758/c18c092d-6e9a-440d-8de9-d10196b911d1)
+
+
+        <script>
+
+            $(function () {
+                $('.tabcontent > div').hide();
+                $('.tab a').click(function (e) {
+                    e.preventDefault();
+                    $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+                    $('.tab a').removeClass('active');
+                    $(this).addClass('active');
+                    return false;
+                }).filter(':eq(0)').click();
+            });
+        </script>
             
