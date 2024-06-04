@@ -1,0 +1,40 @@
+    <table id="table" border="1">
+        <tr>
+            <td>사과</td>
+            <td>apple</td>
+        </tr>
+        <tr>
+            <td>바나나</td>
+            <td>banana</td>
+        </tr>
+        <tr>
+            <td>오렌지</td>
+            <td>orange</td>
+        </tr>
+    </table>
+    <input type="button" value="추가" onclick="addRow()" />
+    <input type="button" value="삭제(끝에서)" onclick="deleteRow(-1)" />
+    <input type="button" value="삭제(앞에서)" onclick="deleteRow(0)" />
+
+
+    <script>
+
+        function addRow(){
+            let table = document.getElementById('table');
+            let newRow = table.insertRow();
+
+            let newCell1 = newRow.insertCell(0);
+            let newCell2 = newRow.insertCell(1);
+
+            //newCell1.innerText = '입력1';
+            //newCell2.innerText = '입력2';
+            newCell1.innerHTML = '<input type="text" placeholder="입력1">';
+            newCell2.innerHTML = '<input type="text" placeholder="입력2">';
+        }
+
+        function deleteRow(rownum) {
+            let table = document.getElementById('table');
+            let newRow = table.deleteRow(rownum);
+        }
+
+    </script>
