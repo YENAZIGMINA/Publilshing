@@ -22,7 +22,5 @@
       li.appendChild(textNode);
   
       // 3. 생성된 li를 ul에 추가
-      document
-        .getElementById('fruits')
-        .appendChild(li);
+      document.getElementById('fruits').appendChild(li);
     }
