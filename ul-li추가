@@ -1,3 +1,5 @@
+#추가
+
     <ul id='fruits'></ul>
 
     <input type='text' id='addValue' />
@@ -25,6 +27,33 @@
       document.getElementById('fruits').appendChild(li);
     }
 
+
+
+#삭제
+
+        <ul id='fruits'>
+          <li>사과</li>
+          <li>바나나</li>
+          <li>오렌지</li>
+        </ul>
+
+        <input type='button' value='삭제' onclick='removeItem()' />
+
+
+        function removeItem()  {
+  
+          // 1. <ul> element 선택
+          const ul = document.getElementById('fruits');
+  
+          // 2. <li> 목록 선택
+          const items = ul.getElementsByTagName('li');
+  
+          // 3. <li> 목록 중 첫번째 item 삭제
+          if(items.length > 0)  {
+            items[0].remove();
+          }
+  
+        }
 
 
     참고 https://hianna.tistory.com/504
