@@ -24,3 +24,7 @@
       // 3. 생성된 li를 ul에 추가
       document.getElementById('fruits').appendChild(li);
     }
+
+
+
+    참고 https://hianna.tistory.com/504
