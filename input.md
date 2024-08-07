@@ -101,4 +101,33 @@
                     });
                 }
 
-        </script>        
+        </script>    
+
+
+
+# chekbox - input 비활성화, 활성화
+
+        <label for="">
+		<input type="checkbox" id="my_checkbox" onclick="toggleTextbox(this)">내용 입력
+	</label>
+
+	<input type="text" id="my_text" disabled>
+
+
+
+
+	<script>
+
+		function toggleTextbox(checkbox){
+			var textbox_elem = document.getElementById('my_text');
+			textbox_elem.disabled = checkbox.checked? false : true ; 
+
+			if(textbox_elem.disabled){
+				textbox_elem.value = null;
+			} else {
+				textbox_elem.focus();
+			}
+		}
+
+	</script>
+
