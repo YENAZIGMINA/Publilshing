@@ -131,3 +131,28 @@
 
 	</script>
 
+
+
+ # checkbox 초기화
+
+ 	<input type='button' name='initCheckboxBtn' value='초기화' onclick='initCheckbox()' />
+    	<br />
+    	<input type='checkbox' name='animal' value='dog' /> 개
+    	<br />
+    	<input type='checkbox' name='animal' value='cat' /> 고양이
+    	<br />
+    	<input type='checkbox' name='animal' value='rabbit' /> 토끼
+
+
+
+    	<script>
+        	function initCheckbox() {
+            		const checkboxs = document.getElementsByName('animal');
+
+            		checkboxs.forEach((checkbox) => {
+                	checkbox.checked = false;
+            		})
+        	}
+
+    </script>
+
