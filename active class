@@ -1,0 +1,32 @@
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".result-wrap .toggle-btn").click(function() {
+				if($(this).parent().hasClass("active")){
+					$(this).parent().removeClass('active');
+				}else{
+					$(this).parent().addClass('active');
+				}
+			});
+
+			$(".result-wrap .toggle-btn").click(function() {
+			  $('.back-tran').toggleClass('active')
+			})
+
+			$(window).on('resize', function() {
+				if (window.innerWidth < 1001) {
+					$('.select-wrap').removeClass('active');
+					$('.result-wrap').removeClass('active');
+					$('.back-tran').removeClass('active');
+				}
+			});
+
+			$(document).ready(function() {
+				if (window.innerWidth < 1001) {
+					$('.select-wrap').removeClass('active');
+					$('.result-wrap').removeClass('active');
+					$('.back-tran').removeClass('active');
+				}
+			});
+
+		});
+	</script>
