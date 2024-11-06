@@ -142,9 +142,9 @@
 # 특정날짜 + 오늘하루 안보기
  
 		<!-- e: 레이어 팝업 임시 -->
-<div>
-	<style>
-		#promotionBanner {
+		<div>
+		<style>
+			#promotionBanner {
 			position: fixed;
 			top: 80px;
 			left: 80px;
