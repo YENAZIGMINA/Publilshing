@@ -139,27 +139,28 @@
 
 
 
-  		# 특정날짜 + 오늘하루 안보기
+# 특정날짜 + 오늘하루 안보기
  
 		<!-- e: 레이어 팝업 임시 -->
     		<div>
         		<style>
-            	#promotionBanner{position:fixed; top:65px; left:65px; z-index:9999999; width:45%; overflow:hidden; box-shadow: 4px 6px 9px 4px rgba(0, 0, 0, 0.2);}
-            	#promotionBanner .img{display:block;}
-            	#promotionBanner .img img{width:100%;}
-            	#promotionBanner .popClose{background:#000; padding:10px; overflow:hidden;}
-            	#promotionBanner .popClose label{float:left; font-size:15px; color: #fff; margin-right: 8px;}
-            	#promotionBanner .popClose .btnClose{float:right; font-size:15px; color: #fff; }
-
-            	@media all and (max-width:1000px){
-                	#promotionBanner{top:90px; left:50%; transform: translateX(-50%); width:80%;}
-                	#promotionBanner .img{width:100%;}
-            	}
-
-            	@media all and (max-width:680px){
-                	#promotionBanner{top:20%; width: 95%;}
-            	}
-        	</style>
+		#promotionBanner{position:fixed; top:80px; left:80px; z-index:9999999; width:500px; overflow:hidden;     border: 5px solid #ededed; box-shadow: 1px 2px 8px 5px rgba(0, 0, 0, 0.2);}
+		#promotionBanner .img{display:block;}
+		#promotionBanner .img img{width:100%;}
+		#promotionBanner .popClose{background:#000; padding:10px; overflow:hidden;}
+		#promotionBanner .popClose label{float:left; font-size:15px; color: #fff; padding-right: 10px;}
+		#promotionBanner .popClose .btnClose{float:right; font-size:15px; color: #fff;}
+	
+		@media all and (max-width:1000px){
+			#promotionBanner{top:90px; left:20px; width:400px;}
+			#promotionBanner .img{width:100%;}
+		}
+	
+		@media all and (max-width:680px){
+			#promotionBanner{top:70px; left:0px; width:100%;}
+			#promotionBanner .img{width:100%;}
+		}
+	</style>
 
 		<!-- <script language="JavaScript">
    		 // 쿠키 저장 함수
@@ -266,7 +267,7 @@
 		</script>
 
 
-        <div id="promotionBanner" style="display:none !important;">
+        <div id="promotionBanner" style="display:none;">
             <div class="popContents">
                 <a href="#n" class="img"><img src="https://cdn.pixabay.com/photo/2023/08/01/06/19/iceberg-8162195_1280.jpg" alt="고성공룡박물관 추석 연휴 운영 안내"></a>
                 <div class="popClose">
