@@ -29,6 +29,63 @@
         ---------------------------------------------------------------------
 
 
+# 팝업 여러개 js 간략하게 작성
+
+		<div class="infos">
+			<a href="" class="tag share" data-popup="pop01">공유하기</a>
+			<a href="" class="tag favor" data-popup="pop02">즐겨찾기</a>
+			<a href="" class="tag decla" data-popup="pop03">신고하기</a>
+		</div>
+
+		<div class="info-pop pop01">
+			<div class="overlay-bg">
+				<div class="popWrap type01">
+					<h4 class="cont-title tit">공유하기</h4>
+					<div class="in-con">
+						<a href="#n" class="link icon">
+							<span>링크 복사</span>
+						</a>
+						<a href="#n" class="kakao icon">
+							<span>카카오톡</span>
+						</a>
+						<a href="#n" class="facebook icon">
+							<span>페이스북</span>
+						</a>
+						<a href="#n" class="naver icon">
+							<span>네이버</span>
+						</a>
+					</div>
+					<a href="#n" class="close-btn"><span class="blind">닫기</span></a>
+				</div>
+			</div>
+		</div>
+  
+
+  		<script>
+			$(document).ready(function() {
+				function togglePopup(popupClass) {
+					$('.' + popupClass).fadeIn();
+					$('.close-btn').click(function(e) {
+						e.preventDefault();
+						$('.' + popupClass).fadeOut();
+					});
+				}
+
+				$('.share, .favor, .decla').click(function (e) {
+					e.preventDefault();
+					var popupClass = $(this).data('popup');
+					togglePopup('info-pop.' + popupClass);
+				});
+			});
+		</script>
+
+
+
+	
+
+ 
+
+
 # 오늘하루안보기 - 레이어팝업
 
         <!doctype html>
