@@ -316,21 +316,21 @@
 			console.log("Popup closed and sliding up");
 		});
 	});
-</script>
+	</script>
 
-<div id="promotionBanner" style="display:none;">
-	<div class="popContents">
-		<a href="#n" class="img"><img src="/portal/upload_data/board_data/BBS_0000130/173672678702303.jpg"
+	<div id="promotionBanner" style="display:none;">
+		<div class="popContents">
+			<a href="#n" class="img"><img src="/portal/upload_data/board_data/BBS_0000130/173672678702303.jpg"
 				alt="2025년 태화강 철새아카데미 5기 모집"></a>
-		<div class="popClose">
-			<input type="checkbox" value="checkbox" name="chkbox" id="chkday" /><label for="chkday">오늘 하루 그만보기
-			</label>
-			<a href="#none" class="btnClose">닫기</a>
+			<div class="popClose">
+				<input type="checkbox" value="checkbox" name="chkbox" id="chkday" /><label for="chkday">오늘 하루 그만보기
+				</label>
+				<a href="#none" class="btnClose">닫기</a>
+			</div>
 		</div>
 	</div>
-</div>
 
-<script language="Javascript">
+	<script language="Javascript">
 	//저장된 해당 쿠키가 있으면 창을 안 띄운다 없으면 뛰운다.
 	cookiedata = document.cookie;
 	if (cookiedata.indexOf("topPop=done") < 0) {
@@ -338,5 +338,5 @@
 	} else {
 		document.all['promotionBanner'].style.display = "none";
 	}
-</script>
-<!-- e: 레이어 팝업 임시 -->
+	</script>
+	<!-- e: 레이어 팝업 임시 -->
