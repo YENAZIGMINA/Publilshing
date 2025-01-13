@@ -264,79 +264,79 @@
 	}
 </style>
 
-<script language="JavaScript">
-	// 쿠키 저장 함수
-	function setCookie(name, value, expiredays) {
-		var todayDate = new Date();
-		todayDate.setDate(todayDate.getDate() + expiredays);
-		document.cookie = name + "=" + encodeURIComponent(value) + "; path=/; expires=" + todayDate.toUTCString() + ";";
-	}
-
-	// 쿠키 읽기 함수
-	function getCookie(name) {
-		var value = "; " + document.cookie;
-		var parts = value.split("; " + name + "=");
-		if (parts.length === 2) return decodeURIComponent(parts.pop().split(";").shift());
-		return null;
-	}
-
-	$(document).ready(function () {
-		// 현재 날짜
-		var now = new Date();
-		console.log("Current Date:", now);
-
-		// 기한 날짜 설정: 2025년 1월 13일 오전 9시부터 2025년 1월 22일 오후 6시까지
-		var deadlineStart = new Date("2025-01-15T09:00:00"); // 시작 날짜
-		var deadlineEnd = new Date("2025-01-22T18:00:00"); // 종료 날짜
-		console.log("Deadline Start Date:", deadlineStart);
-		console.log("Deadline End Date:", deadlineEnd);
-
-		// 쿠키 확인
-		var topPopCookie = getCookie("topPop");
-		console.log("TopPop Cookie:", topPopCookie);
-
-		// 쿠키가 없거나, 현재 날짜가 설정된 기간 안에 있으면 팝업을 표시
-		if (!topPopCookie && now >= deadlineStart && now <= deadlineEnd) {
-			$('#promotionBanner').show();
-			console.log("Popup shown");
-		} else {
-			$('#promotionBanner').hide();
-			console.log("Popup not shown");
+	<script language="JavaScript">
+		// 쿠키 저장 함수
+		function setCookie(name, value, expiredays) {
+			var todayDate = new Date();
+			todayDate.setDate(todayDate.getDate() + expiredays);
+			document.cookie = name + "=" + encodeURIComponent(value) + "; path=/; expires=" + todayDate.toUTCString() + ";";
 		}
 
-		// 닫기 버튼 클릭 이벤트
-		$("#promotionBanner .btnClose").click(function () {
-			// 오늘만 보기 체크박스의 체크 여부를 확인해서 체크되어 있으면 쿠키를 생성한다.
-			if ($("#chkday").is(':checked')) {
-				setCookie("topPop", "done", 1);
-				console.log("Cookie set for topPop");
-			}
-			// 팝업창을 위로 애니메이트 시킨다. 혹은 slideUp()
-			$('#promotionBanner').slideUp(500);
-			console.log("Popup closed and sliding up");
-		});
-	});
-	</script>
+		// 쿠키 읽기 함수
+		function getCookie(name) {
+			var value = "; " + document.cookie;
+			var parts = value.split("; " + name + "=");
+			if (parts.length === 2) return decodeURIComponent(parts.pop().split(";").shift());
+			return null;
+		}
 
-	<div id="promotionBanner" style="display:none;">
-		<div class="popContents">
-			<a href="#n" class="img"><img src="/portal/upload_data/board_data/BBS_0000130/173672678702303.jpg"
-				alt="2025년 태화강 철새아카데미 5기 모집"></a>
-			<div class="popClose">
-				<input type="checkbox" value="checkbox" name="chkbox" id="chkday" /><label for="chkday">오늘 하루 그만보기
-				</label>
-				<a href="#none" class="btnClose">닫기</a>
+		$(document).ready(function () {
+			// 현재 날짜
+			var now = new Date();
+			console.log("Current Date:", now);
+
+			// 기한 날짜 설정: 2025년 1월 13일 오전 9시부터 2025년 1월 22일 오후 6시까지
+			var deadlineStart = new Date("2025-01-15T09:00:00"); // 시작 날짜
+			var deadlineEnd = new Date("2025-01-22T18:00:00"); // 종료 날짜
+			console.log("Deadline Start Date:", deadlineStart);
+			console.log("Deadline End Date:", deadlineEnd);
+
+			// 쿠키 확인
+			var topPopCookie = getCookie("topPop");
+			console.log("TopPop Cookie:", topPopCookie);
+
+			// 쿠키가 없거나, 현재 날짜가 설정된 기간 안에 있으면 팝업을 표시
+			if (!topPopCookie && now >= deadlineStart && now <= deadlineEnd) {
+				$('#promotionBanner').show();
+				console.log("Popup shown");
+			} else {
+				$('#promotionBanner').hide();
+				console.log("Popup not shown");
+			}
+
+			// 닫기 버튼 클릭 이벤트
+			$("#promotionBanner .btnClose").click(function () {
+				// 오늘만 보기 체크박스의 체크 여부를 확인해서 체크되어 있으면 쿠키를 생성한다.
+				if ($("#chkday").is(':checked')) {
+					setCookie("topPop", "done", 1);
+					console.log("Cookie set for topPop");
+				}
+				// 팝업창을 위로 애니메이트 시킨다. 혹은 slideUp()
+				$('#promotionBanner').slideUp(500);
+				console.log("Popup closed and sliding up");
+			});
+		});
+		</script>
+
+		<div id="promotionBanner" style="display:none;">
+			<div class="popContents">
+				<a href="#n" class="img"><img src="/portal/upload_data/board_data/BBS_0000130/173672678702303.jpg"
+					alt="2025년 태화강 철새아카데미 5기 모집"></a>
+				<div class="popClose">
+					<input type="checkbox" value="checkbox" name="chkbox" id="chkday" /><label for="chkday">오늘 하루 그만보기
+					</label>
+					<a href="#none" class="btnClose">닫기</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<script language="Javascript">
-	//저장된 해당 쿠키가 있으면 창을 안 띄운다 없으면 뛰운다.
-	cookiedata = document.cookie;
-	if (cookiedata.indexOf("topPop=done") < 0) {
-		document.all['promotionBanner'].style.display = "block";
-	} else {
-		document.all['promotionBanner'].style.display = "none";
-	}
-	</script>
-	<!-- e: 레이어 팝업 임시 -->
+		<script language="Javascript">
+		//저장된 해당 쿠키가 있으면 창을 안 띄운다 없으면 뛰운다.
+		cookiedata = document.cookie;
+		if (cookiedata.indexOf("topPop=done") < 0) {
+			document.all['promotionBanner'].style.display = "block";
+		} else {
+			document.all['promotionBanner'].style.display = "none";
+		}
+		</script>
+		<!-- e: 레이어 팝업 임시 -->
